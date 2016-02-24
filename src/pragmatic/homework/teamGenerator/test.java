@@ -6,8 +6,14 @@ public class test {
 		People p = new People();
 		
 		p.numberOfPeople();
-		p.namePeople();
+		p.namePeople();	
 		p.printNames();
+		p.shuffle();
+		p.printNames();
+		p.sortNames();
+		p.printNames();
+	
+		 
 	}
 
 }
