@@ -15,7 +15,7 @@ public class Student {
 	private Scanner keyboard = new Scanner(System.in);
 
 	// To be noted here that I studied hard to fix this.
-	public void studentAge() throws CustomException {
+	public void studentAge() {
 		do {
 			try {
 				out.print("What is the age of the student: ");
@@ -27,30 +27,51 @@ public class Student {
 			} catch (InputMismatchException ime) {
 				out.println("This needs to be a number");
 				keyboard.nextLine();
+			} catch (CustomException e) {
+				out.println("Kid cannot be younger than 7 or older than 18");
+
 			}
 
 		} while (exception);
 	}
 
-	public void firstNameStudent() throws CustomException {
+	public void firstNameStudent() {
+		
 
-		out.print("What is the first name of the student: ");
-		this.firstName = keyboard.next();
-		if (this.firstName.length() >= 12) {
-			throw new CustomException("First name cannot be longer than 12 Symbols!!");
-		}
+			out.print("What is the first name of the student: ");
+			this.firstName = keyboard.next();
+			if (this.firstName.length() >= 12 || this.firstName.length() <= 1) {
+				do {
+				try {
+					exception = false;
+					throw new CustomException("First name cannot be longer than 12 Symbols or shorter than 1!!");
+					
+				}
+
+				catch (CustomException e) {
+					out.println("First name cannot be longer than 12 Symbols or shorter than 1!!");
+
+				}
+			}while (exception);
+		} 
 
 	}
 
-	public void lastNameStudent() throws CustomException {
+	public void lastNameStudent() {
 
 		out.print("What is the last name of the student: ");
 		this.firstName = keyboard.next();
 		if (this.firstName.length() >= 20) {
-			throw new CustomException("Last name cannot be longer than 20 Symbols!!");
+			try {
+				throw new CustomException("Last name cannot be longer than 20 Symbols!!");
+			} catch (CustomException e) {
+				out.println("First name cannot be longer than 12 Symbols or shorter than 1!!");
+
+			}
 		}
 	}
-// I do not know how to catch an exception here.
+
+	// I do not know how to catch an exception here.
 	// The program just terminates if the input is not male or female
 	public void sexOfStudent() {
 
