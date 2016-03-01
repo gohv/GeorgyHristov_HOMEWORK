@@ -22,22 +22,20 @@ public class DatabaseOfWords {
 	private String explanation;
 
 	public void addNewWord() {
-		
-		while (keyboard.hasNext()) {
-			out.print("Type a word: ");
+		out.println("Type a word or type   'done'  to exit: ");	
+		while (keyboard.hasNext()) {			
 			word = keyboard.next();
 			if (DONE.equals(word)) {
 				break;
-			}
-			
-			out.print("Type explanation: ");
-			explanation = keyboard.next();
+			}			
+			out.println("Type explanation: ");
+			explanation = keyboard.nextLine();
 			if (DONE.equals(explanation)) {
 				break;
-			}
-			// I tried placing dictionary.put(word, explanation); here - it did not work!
+			}			
+			dictionary.put(word, explanation);
 		}
-		dictionary.put(word, explanation);
+		
 
 	}
 	public void printer(){
