@@ -64,7 +64,7 @@ public class Student {
 
 		do {
 			out.print("What is the last name of the student: ");
-			this.firstName = keyboard.next();
+			this.lastName = keyboard.next();
 
 			try {
 				if (this.firstName.length() >= 20 || this.firstName.length() <= 1) {
