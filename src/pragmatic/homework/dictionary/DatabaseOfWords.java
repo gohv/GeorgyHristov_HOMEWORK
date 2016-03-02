@@ -15,8 +15,9 @@ import java.util.Map.Entry;
 
 public class DatabaseOfWords {
 	private final String DONE = "done";
-	// the KEY is going to be the word:
-	Hashtable<String, String> dictionary = new Hashtable<>();
+	// Hashtable Must be static or it returns NULL on search !!!!!
+	static Hashtable<String, String> dictionary = new Hashtable<>();
+	
 	Scanner keyboard = new Scanner(System.in);
 	private String word;
 	private String explanation;
@@ -41,5 +42,6 @@ public class DatabaseOfWords {
 	public void printer(){
 		out.println(dictionary);
 	}
+	
 
 }
