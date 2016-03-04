@@ -18,17 +18,16 @@ public class Index {
 		out.print("Search for: ");
 		String find = keyboard.next();
 		out.println(DatabaseOfWords.dictionary.get(find));
-
+		if (DatabaseOfWords.dictionary.get(find) == null) {
+			out.println("Nothing found! Search is Case sensitive!");
+		}
 	}
 
 	public void close() {
-		out.println("Exit?: ");
-		EXIT = keyboard.next();
-		if (EXIT.equals(EXIT)) {
-			out.println("Okay bye!");
 
-		}
+		out.println("Okay bye!");
 		System.exit(0);
+
 	}
 
 }
