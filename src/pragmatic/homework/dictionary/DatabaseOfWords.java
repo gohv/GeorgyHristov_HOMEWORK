@@ -16,32 +16,29 @@ import java.util.Map.Entry;
 public class DatabaseOfWords {
 	private final String DONE = "done";
 	// Hashtable Must be static or it returns NULL on search !!!!!
-	static Hashtable<String, String> dictionary = new Hashtable<>();
-	
+	static Hashtable<String, Object> dictionary = new Hashtable<>();
+
 	Scanner keyboard = new Scanner(System.in);
 	private String word;
 	private String explanation;
 
 	public void addNewWord() {
-		out.println("Type a word or type   'done'  to exit: ");	
-		while (keyboard.hasNext()) {			
-			word = keyboard.next();
+		
+		while (true) {
+			out.println("Type a word or type   'done'  to exit: ");
+			word = keyboard.nextLine();
 			if (DONE.equals(word)) {
 				break;
-			}			
+			}
 			out.println("Type explanation: ");
 			explanation = keyboard.nextLine();
 			if (DONE.equals(explanation)) {
 				break;
-			}			
+			}
 			dictionary.put(word, explanation);
 		}
-		
 
 	}
-	public void printer(){
-		out.println(dictionary);
-	}
-	
+
 
 }
