@@ -11,7 +11,7 @@ public class Words {
 	DatabaseOfWords database = new DatabaseOfWords();
 	
 	public void addWord(String key, String value){
-		key = database.dictionary.put(key, value);		
+		key = (String) database.dictionary.put(key, value);		
 		
 		}
 	

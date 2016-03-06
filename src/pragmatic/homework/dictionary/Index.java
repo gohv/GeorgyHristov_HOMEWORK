@@ -10,8 +10,8 @@ import java.util.Scanner;
  */
 
 public class Index {
-	private String EXIT = "exit";
-	DatabaseOfWords search = new DatabaseOfWords();
+
+	DatabaseOfWords index = new DatabaseOfWords();
 	Scanner keyboard = new Scanner(System.in);
 
 	public void search() {
