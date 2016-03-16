@@ -6,7 +6,8 @@ import pragmatic.homework.dictionary.DatabaseOfWords;
 
 public class Index {
 	private String EXIT = "EXIT";
-
+	Dictionary Dictionary = new Dictionary();
+	
 	public void addWord(String word, String explanation) {
 		Dictionary.dictionary.put(word, explanation);
 	}
@@ -16,6 +17,7 @@ public class Index {
 		if (Dictionary.dictionary.get(find) == null) {
 			out.println("Nothing found! Search is Case sensitive!");
 		}
+		System.out.println(Dictionary.dictionary.get(find));
 	}
 
 	public void exit(String exit) {
