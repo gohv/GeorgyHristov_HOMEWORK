@@ -10,8 +10,13 @@ import java.util.Scanner;
  */
 
 public class Index {
+<<<<<<< HEAD
 	
 	DatabaseOfWords search = new DatabaseOfWords();
+=======
+
+	DatabaseOfWords index = new DatabaseOfWords();
+>>>>>>> origin/master
 	Scanner keyboard = new Scanner(System.in);
 
 	public void search() {
