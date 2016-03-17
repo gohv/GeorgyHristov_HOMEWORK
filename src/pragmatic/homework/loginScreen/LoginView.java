@@ -15,7 +15,7 @@ public class LoginView extends JFrame implements ActionListener {
 	
 	private JTextField userName;
 	private JTextField passWord;
-	private JLabel userNameLabel;
+	private JLabel userNameLabel = new JLabel("Username");
 	private JLabel passWordLabel;
 	private JTextField userNameField;
 	private JPasswordField passWordField;
@@ -29,12 +29,6 @@ public class LoginView extends JFrame implements ActionListener {
 		setSize(3000, 1500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(null);
-		// userName Text
-		userNameLabel.setBounds(10, 10, 80, 25);;
-		add(userNameLabel);
-		
-		
-		
 		
 	}
 	
