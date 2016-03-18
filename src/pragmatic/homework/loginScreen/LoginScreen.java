@@ -2,23 +2,16 @@ package pragmatic.homework.loginScreen;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SpringLayout;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-
-import com.sun.imageio.plugins.jpeg.JPEG;
-
 import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 
-public class LoginView extends JFrame implements ActionListener {
+public class LoginScreen extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 
@@ -28,7 +21,7 @@ public class LoginView extends JFrame implements ActionListener {
 	private JTextField userNameField = new JTextField();
 	private JPasswordField passWordField = new JPasswordField();
 
-	public LoginView() {
+	public LoginScreen() {
 		createUI();
 	}
 
@@ -69,23 +62,23 @@ public class LoginView extends JFrame implements ActionListener {
 		// password input field
 		passWordField.setBounds(100, 40, 160, 25);
 		passWordField.getDocument().addDocumentListener(new DocumentListener() {
-			
+
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				updateButton();
-				
+
 			}
-			
+
 			@Override
 			public void insertUpdate(DocumentEvent e) {
 				updateButton();
-				
+
 			}
-			
+
 			@Override
 			public void changedUpdate(DocumentEvent e) {
 				updateButton();
-				
+
 			}
 		});
 		getContentPane().add(passWordField);
@@ -100,7 +93,7 @@ public class LoginView extends JFrame implements ActionListener {
 	@SuppressWarnings("static-access")
 	@Override
 	public void actionPerformed(ActionEvent e) {
-	JOptionPane pane = new JOptionPane();
+		JOptionPane pane = new JOptionPane();
 		pane.showMessageDialog(null, "Success!", "Log In: ", JOptionPane.INFORMATION_MESSAGE);
 
 	}
