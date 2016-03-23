@@ -1,10 +1,10 @@
 package pragmatic.homework.loginScreen;
 
-public class LoginViewDemo {
+public class LoginScreenDemo {
 
 	public static void main(String[] args) {
 		
-		LoginView frame = new LoginView();
+		LoginScreen frame = new LoginScreen();
 		frame.setVisible(true);
 		
 
