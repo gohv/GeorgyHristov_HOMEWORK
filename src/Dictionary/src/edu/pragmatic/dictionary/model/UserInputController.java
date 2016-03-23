@@ -1,5 +1,6 @@
 package Dictionary.src.edu.pragmatic.dictionary.model;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class UserInputController {
@@ -19,7 +20,7 @@ public class UserInputController {
 		dictionary = new Dictionary();
 	}
 	
-	public void start() {
+	public void start() throws IOException{
 		
 		boolean shouldExit = false;
 		do {
@@ -62,7 +63,8 @@ public class UserInputController {
 		}
 	}
 	
-	private void addWord() {
+	private void addWord(){
+		
 		System.out.print("Enter <word> = <translation>: ");
 		String result = scanner.nextLine();
 		String[] tokens = result.split("=");
@@ -70,12 +72,17 @@ public class UserInputController {
 			String word = tokens[0].trim();
 			String translation = tokens[1].trim();
 			
-			WordEntity entity = new WordEntity(word, translation);
-			dictionary.addWord(entity);
+			WordEntity entity = new WordEntity(word, translation, translation);
+			try {
+				dictionary.addWord(entity);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
-	private void search() {
+	private void search() throws IOException{
 		System.out.println("Enter a word: ");
 		String word = scanner.nextLine();
 		String translation = dictionary.search(word);

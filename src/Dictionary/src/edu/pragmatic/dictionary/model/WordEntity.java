@@ -4,11 +4,12 @@ public class WordEntity {
 	
 	private String word;
 	private String translation;
-	
-	public WordEntity(String word, String translation) {
+	private String trans;
+	public WordEntity(String word, String translation, String trans) {
 		super();
 		this.word = word;
 		this.translation = translation;
+		this.trans = trans;
 	}
 	
 	public String getWord() {
@@ -17,5 +18,9 @@ public class WordEntity {
 	
 	public String getTranslation() {
 		return translation;
+	}
+	
+	public String getTrans(){
+		return trans;
 	}
 }
