@@ -4,7 +4,7 @@ import static java.lang.System.out;
 public class GeorgyHristovHomeworkExersice6  {
 	 
     public static void main(String[] args) {
-    	// Mnogo se borih s tazi zada4a, minah prez wsichki vidove chuwstwa koito chowek moje da izpita...
+    	
     	Scanner keyboard = new Scanner(System.in);
             int digits[] = new int[5+1];
             int smallDigit = digits[0]+ 1;
