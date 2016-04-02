@@ -32,7 +32,7 @@ public class Person {
 		out.println("++++++++++++++++++++++++++++++++++++++++++++++");
 		out.println(name + " is a retired Boxer, now training guys");
 		out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-	}// remonta na kolata mi struwa 2500 leva....
+	}
 
 	public void date() {
 		out.println(date);
