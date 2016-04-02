@@ -2,10 +2,10 @@ import java.util.Scanner;
 public class cast {
 
 	public static void main(String[] args) {
-		long kur = 1234567891l;
+		long i = 1234567891l;
 		int k;
 		
-		k =(int) kur; // we instruct the compiler to use the int as long - this is what we call CAST
+		k =(int) i; // we instruct the compiler to use the int as long - this is what we call CAST
 		System.out.println(k);
 		
 		// check java for dummies - explanation of ++ and +1
